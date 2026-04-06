@@ -1,0 +1,22 @@
+# 環境変数・シークレット（絶対にコミットしない）
+.env
+.env.*
+!.env.example
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ログファイル
+*.log
+bot.log
+bot-error.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# バックアップ
+*.bak

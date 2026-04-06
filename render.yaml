@@ -1,0 +1,28 @@
+services:
+  - type: worker
+    name: discord-claude-bot
+    runtime: node
+    plan: free
+    buildCommand: npm install && npm install -g @anthropic-ai/claude-code
+    startCommand: node index.js
+    envVars:
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: DISCORD_TOKEN
+        sync: false
+      - key: CLIENT_ID
+        sync: false
+      - key: GUILD_ID
+        sync: false
+      - key: ALLOW_DANGEROUS_MODE
+        value: "true"
+      - key: CLAUDE_MODEL
+        value: claude-haiku-4-5
+      - key: MAX_TURNS
+        value: "30"
+      - key: TIMEOUT_MS
+        value: "0"
+      - key: MAX_CONCURRENT
+        value: "3"
+      - key: WORK_DIR
+        value: /tmp/discord-bot-workdir

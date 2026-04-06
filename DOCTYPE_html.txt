@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ケアホーム成田西 入居自動化LP</title>
+  <style>
+    :root {
+      --color-primary-50: #fff4e5;
+      --color-primary-500: #f59e0b;
+      --color-primary-900: #8a4b00;
+      --color-accent: #f56b00;
+      --color-neutral-50: #f7f7f7;
+      --color-neutral-900: #2b2b2b;
+      --bg: #ffffff;
+      --text: #1a1a1a;
+      --muted: #60666a;
+    }
+    html, body { margin: 0; padding: 0; font-family: Arial, sans-serif; color: var(--text); background: var(--bg); }
+    .container { width: 92%; max-width: 1100px; margin: 0 auto; }
+    header { padding: 20px 0; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center; }
+    .logo { height: 40px; width: 120px; background: #f59e0b; border-radius: 6px; }
+    .lp-hero { padding: 60px 0; text-align: center; background: #fff9f0; }
+    .lp-hero h1 { font-size: 38px; margin: 0 0 12px; font-weight: 700; }
+    .lp-hero p { font-size: 16px; color: var(--muted); max-width: 760px; margin: 0 auto 20px; }
+    .cta { display: inline-block; padding: 14px 22px; background: var(--color-accent); color: #fff; text-decoration: none; border-radius: 6px; font-weight: 700; }
+    .selector { margin: 14px auto 0; }
+    .hero-images { display: flex; justify-content: center; gap: 2%; margin: 20px 0 0; }
+    .hero-images img { width: 49%; height: auto; max-height: 320px; object-fit: cover; border-radius: 6px; border: 1px solid #ddd; }
+    section { padding: 48px 0; }
+    h2 { font-size: 28px; margin: 0 0 12px; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .block { background: #fff; border: 1px solid #eee; border-radius: 8px; padding: 16px; }
+    .block h3 { font-size: 16px; margin: 0 0 6px; }
+    .block p { color: var(--muted); font-size: 14px; line-height: 1.5; }
+    .tag { display:inline-block; padding: 2px 8px; border-radius: 12px; background: #fff1e0; font-size: 12px; color: #333; }
+    ul { padding-left: 20px; color: var(--muted); }
+    .footer { text-align: center; padding: 40px 0; color:#666; }
+    @media (max-width: 900px) { .grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 600px) { .grid { grid-template-columns: 1fr; } .lp-hero h1 { font-size: 28px; } }
+  </style>
+</head>
+<body>
+  <header class="container" role="banner">
+    <div style="display:flex; align-items:center; justify-content:space-between;">
+      <div style="font-weight:700; font-size:18px;">障がい者グループホーム LP</div>
+      <div class="logo" aria-label="ブランドロゴ"></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="lp-hero" id="hero" aria-label="ヒーロー">
+      <div class="container">
+        <h1>Narita西・Ikeda中町の2拠点を横断で募集</h1>
+        <p>応募情報を一元管理。見学・入居までの導線を最適化します。</p>
+        <a class="cta" href="NARITA_FORM_URL">今すぐ応募・見学予約</a>
+        <div class="selector" aria-label="施設選択" style="margin-top:14px;">
+          <select id="facilitySelect" style="padding:10px 12px; border-radius:6px; border:1px solid #ddd;">
+            <option value="NaritaNishi" selected>ケアホーム成田西</option>
+            <option value="IkedaNakacho">ケアホーム池田中町</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <section id="pains" class="container" aria-label="課題">
+      <h2>こんなお悩みを解決します</h2>
+      <ul>
+        <li>情報の分散をなくし、最新情報を一元管理したい</li>
+        <li>見学日程の調整をスムーズにしたい</li>
+        <li>問い合わせから入居までのリードタイムを短縮したい</li>
+      </ul>
+    </section>
+
+    <section id="solutions" class="container lp-solutions" aria-label="提供価値">
+      <div class="grid">
+        <div class="block">
+          <h3>入口の一元化（Googleフォーム）</h3>
+          <p>応募情報を1か所で取得、CRMへ自動登録。迅速な対応の土台を作ります。</p>
+          <span class="tag">機能1</span>
+        </div>
+        <div class="block">
+          <h3>自動返信＋導線</h3>
+          <p>応募直後に自動返信、担当者へ連携。LINE等の導線へつなぐ設計も可能。</p>
+          <span class="tag">機能2</span>
+        </div>
+        <div class="block">
+          <h3>KPI可視化</h3>
+          <p>Google Sheetsベースのダッシュボードで日次/週次のKPIを可視化。放置案件を検知します。</p>
+          <span class="tag">機能3</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="cta-form" class="container" aria-label="CTA">
+      <div class="block" style="text-align:center;">
+        <h2>今すぐ始める</h2>
+        <p>LPと自動化で、問い合わせを成約まで落とさず運ぶ。今すぐ無料相談フォームへ。</p>
+        <a class="cta" href="https://docs.google.com/forms/d/e/1FAIpQLSejvWP8S0lKFBXVDLQfWOEhjD3uoD-S0An088ctQ3YHCYFMTA/viewform">Googleフォームへ</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container"><p>障がい者グループホーム向けLP – B案1ファイル</p></div>
+  </footer>
+</body>
+</html>
